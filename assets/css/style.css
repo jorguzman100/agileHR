@@ -1,0 +1,959 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row .col {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* html,
+body,
+main,
+main .col,
+#whatWeDo,
+#whatWeDo .col,
+#whatWeDo .container {
+  overflow: unset !important;
+  height: unset !important;
+} */
+
+p {
+  text-align: justify;
+}
+
+a {
+  color: #47b2e4;
+}
+
+a:hover {
+  color: #73c5eb;
+  text-decoration: none;
+}
+
+#newsSubscribeBtn:focus,
+button:focus {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Jost", sans-serif;
+  color: #37517e;
+  font-weight: bold;
+}
+
+.backgroundLightGray {
+  background-color: rgba(243, 245, 250, 1);
+}
+
+.shadow {
+  box-shadow: 0px 2px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  border: 0;
+}
+
+/* Bounce Effect: https://www.youtube.com/watch?v=exb2ab72Xhs */
+.bounceEffect > * {
+  transform: translateY(10px);
+  transition: transform 1s;
+}
+
+.bounceEffect:hover > * {
+  transform: translateY(0);
+}
+
+.button {
+  cursor: pointer;
+  font-size: 16px;
+  padding: 7px 20px;
+  background: #47b2e4;
+  color: #fff !important;
+  border: 0;
+  transition: 0.4s;
+  border-radius: 50px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+  background: #209dd8;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+header {
+  background: rgba(56, 82, 125, 1);
+  padding: 0px 0px;
+}
+
+.solidHeader {
+  background: rgba(56, 82, 125, 1);
+  padding: 0px 0px;
+  transition: all 1.5s;
+}
+
+.transparentHeader {
+  background: rgba(56, 82, 125, 0.85);
+}
+
+header i {
+  font-size: 2rem;
+}
+
+.navbar-brand:hover > * {
+  color: rgba(255, 255, 255, 1);
+}
+
+header .brandName {
+  display: inline-flex;
+  font-size: 1.75rem;
+}
+
+header .brandSlogan {
+  font-size: 0.7rem;
+}
+
+.nav-item {
+  font-size: 1.05rem;
+  padding-inline: 1.5rem;
+}
+
+/* For Media */
+.navbar-collapse a {
+  width: 240px;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .navbar-collapse a {
+    width: 100%;
+  }
+}
+
+.navbar-toggler,
+.navbar-toggler-icon,
+.navbar a {
+  color: #fff !important;
+  border: none !important;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler-icon:hover,
+.navbar a:hover {
+  color: #47b2e4 !important;
+  border: none !important;
+}
+
+.dropdown-menu {
+  background: rgba(56, 82, 125, 0.75);
+  border: none;
+  margin: 0px;
+}
+
+.dropdown-item:hover {
+  background: none;
+  border: none;
+}
+
+.img-fluid,
+.card {
+  /* Bootstrap class modified to apply border radious to images */
+  max-width: 100%;
+  height: auto;
+
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  border: 0;
+}
+
+/* Back to top button */
+
+.back-to-top {
+  position: fixed;
+  display: none;
+  right: 20px;
+  bottom: 100px;
+  z-index: 99999;
+}
+
+.back-to-top i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background: #47b2e4;
+  color: #fff;
+  transition: all 0.4s;
+}
+
+.back-to-top i:hover {
+  background: #209dd8;
+  color: #fff;
+}
+
+/* Carousel */
+
+/* A darker image: https://www.youtube.com/watch?time_continue=3&v=h3gktsmp3Oo&feature=emb_logo */
+.backImageDivContainer {
+  width: 100%;
+  height: 350px;
+  background-color: rgba(0, 0, 50, 1);
+  position: relative;
+  display: inline-block;
+}
+
+.backImageDiv {
+  height: 350px;
+  background-image: url(../img/team/teamHR.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0.6;
+  display: block;
+}
+
+.overlayCarousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.fullLogoContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.fullLogo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* Media */
+.fullLogo .logo {
+  font-size: 3rem;
+  padding-top: 1rem;
+  padding-right: 0rem;
+}
+
+.fullLogo .brandName {
+  font-size: 2.5rem;
+  display: inline-block;
+  margin-bottom: 0px;
+  line-height: normal;
+}
+
+.fullLogo .brandSlogan {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.fullLogo .brandConsulting {
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.carousel-item {
+  width: 100%;
+  height: 350px;
+  color: rgba(255, 255, 255, 1) !important;
+  text-align: justify;
+  background-attachment: fixed;
+  padding: 5% 15% 0;
+  margin-top: 1rem;
+}
+
+.carousel-item h3,
+.carousel-item ul,
+.carousel-item p {
+  color: white;
+  margin-bottom: 0;
+}
+
+.carousel-item h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 1.4rem;
+}
+
+.carousel-item img {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  margin-left: auto;
+  float: right;
+}
+
+#emptyImage {
+  display: block;
+  width: 40%;
+  height: 20%;
+}
+
+.carousel-indicators li {
+  margin-bottom: 20px;
+}
+
+.carousel-control-next:focus,
+.carousel-control-next:hover,
+.carousel-control-prev:focus,
+.carousel-control-prev:hover {
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+  opacity: 0.9;
+}
+
+/*--------------------------------------------------------------
+# A high impact HR
+--------------------------------------------------------------*/
+
+#highImpChartImg {
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Why agile HR
+--------------------------------------------------------------*/
+
+#agileTeamImg {
+  box-shadow: none;
+}
+
+/*--------------------------------------------------------------
+# What we do
+--------------------------------------------------------------*/
+
+/* Service cards */
+
+#whatWeDo .col {
+  padding: 5px 5px;
+}
+
+#whatWeDo .cardCol {
+  background-image: url(./../../assets/img/home_images/city.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0px;
+  border-radius: 5px;
+}
+
+/* Image Hover Text Overlay Effect: https://www.youtube.com/watch?v=exb2ab72Xhs */
+.frontCard {
+  height: 375px;
+  /* background-color: rgba(56, 82, 125, 1); */
+  background: rgba(56, 82, 125, 0.85);
+  position: relative;
+  border-radius: 5px;
+}
+
+.frontCard h3 {
+  color: white;
+}
+
+.frontCard .card-body {
+  padding: 3rem 1rem;
+}
+
+.frontCard img {
+  width: 45%;
+  max-height: 45%;
+}
+
+.behindCard {
+  height: 375px;
+  background-color: rgba(56, 82, 125, 0);
+  color: white;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 5px;
+}
+
+.behindCard p {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.behindCard .pBeforeUL {
+  margin-bottom: 0;
+}
+
+.behindCard .emptyDiv {
+  background-color: rgba(56, 82, 125, 0);
+  padding: 2rem 2.5rem;
+  margin: 0px;
+  border-radius: 5px;
+}
+
+.behindCard .card-body {
+  background-color: rgba(56, 82, 125, 0);
+  padding: 0rem 2.5rem 1rem 2.5rem;
+  height: 100%;
+}
+
+.behindCard .card-footer {
+  background-color: rgba(56, 82, 125, 0);
+  border: none;
+  padding: 0;
+  border-radius: 5px;
+}
+
+.behindCard .wwdLearnMore-btn {
+  padding: 5px 25px;
+  margin-bottom: 20px;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  border-radius: 50px;
+  transition: 0.5s;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.behindCard .wwdLearnMore-btn:hover {
+  background: #47b2e4;
+  border: 2px solid #47b2e4;
+  color: #fff;
+}
+
+.behindCard > * {
+  transform: translateY(50px);
+  transition: transform 0.3s;
+}
+
+.behindCard:hover {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.behindCard:hover > * {
+  transform: translateY(0);
+}
+
+.card-img-overlay {
+  text-align: center;
+  padding: 0px !important;
+}
+
+.card-img-overlay .card-text {
+  text-align: left;
+  margin-top: 5%;
+}
+
+/*--------------------------------------------------------------
+# How we do it
+--------------------------------------------------------------*/
+
+.howWeDoIt img {
+  width: auto;
+  height: 60px;
+}
+
+.howWeDoItCol {
+  margin-bottom: 2rem !important;
+}
+
+/*--------------------------------------------------------------
+# Call to action
+--------------------------------------------------------------*/
+
+/* Parallax effect: https://www.youtube.com/watch?v=iGam6w8Jz9g&t=728s */
+.callToActionSection {
+  background-image: url(./../../assets/img/home_images/city.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.callToActionDiv {
+  background: rgba(56, 82, 125, 0.85);
+}
+
+.callToActionSection .wrapper {
+  padding: 70px 0px;
+}
+
+.callToActionSection p {
+  font-size: 1.1rem;
+  padding-top: 10px;
+  color: white;
+  opacity: 1;
+}
+
+.cta-btn {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 00px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.cta-btn:hover {
+  background: #47b2e4;
+  border: 2px solid #47b2e4;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Why us
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# About us
+--------------------------------------------------------------*/
+
+.aboutUs strong {
+  color: rgb(0, 0, 255);
+}
+
+.jorgeRow .card,
+.vanessaRow .card,
+.manuelRow .card {
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background: #fff;
+  border: 0;
+}
+
+.jorgeRow .col-3,
+.vanessaRow .col-3,
+.manuelRow .col-3 {
+  padding: 0;
+}
+
+.jorgeRow img,
+.vanessaRow img,
+.manuelRow img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.social {
+  text-align: end;
+}
+
+.social a {
+  font-size: 18px;
+  display: inline-block;
+  background: rgba(243, 245, 250, 1);
+  color: #37517e;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  background: #47b2e4;
+  color: #fff;
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact .info {
+  border-top: 3px solid #47b2e4;
+  border-bottom: 3px solid #47b2e4;
+  padding: 30px;
+  background: #fff;
+  width: 100%;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
+}
+
+.contact .info i {
+  font-size: 20px;
+  color: #47b2e4;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #e7f5fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #37517e;
+}
+
+.contact .info p {
+  padding: 0 0 10px 60px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #6182ba;
+}
+
+.contact .info .email p {
+  padding-top: 5px;
+}
+
+.contact .info .social-links {
+  padding-left: 60px;
+}
+
+.contact .info .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+  margin-right: 10px;
+}
+
+.contact .info .social-links a:hover {
+  background: #47b2e4;
+  color: #fff;
+}
+
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
+  background: #47b2e4;
+  color: #fff;
+}
+
+.contact .message-form {
+  width: 100%;
+  border-top: 3px solid #47b2e4;
+  border-bottom: 3px solid #47b2e4;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+}
+
+.contact .message-form .form-group {
+  padding-bottom: 8px;
+}
+
+.contact .message-form .validate {
+  color: #6182ba;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.contact .message-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .message-form input,
+.contact .message-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.contact .message-form input:focus,
+.contact .message-form textarea:focus {
+  border-color: #47b2e4;
+}
+
+.contact .message-form input {
+  height: 44px;
+}
+
+.contact .message-form textarea {
+  padding: 10px 12px;
+}
+
+#submitMessageBtn {
+  background: #47b2e4;
+  border: 0;
+  padding: 12px 34px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+#submitMessageBtn:hover {
+  background: #209dd8;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  font-size: 14px;
+}
+
+#footer .footer-newsletter {
+  padding: 50px 0;
+  background: #f3f5fa;
+  text-align: center;
+  font-size: 1rem;
+  color: #444444;
+}
+
+#footer .footer-newsletter h4 {
+  font-size: 1.5rem;
+  margin: 0 0 20px 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 600;
+  color: #37517e;
+}
+
+#newsSubscribeDiv {
+  margin-top: 30px;
+  background: #fff;
+  padding: 6px 10px;
+  position: relative;
+  border-radius: 50px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.06);
+  text-align: left;
+}
+
+#newsSubscribeInput {
+  border: 0;
+  padding: 4px 8px;
+  width: calc(100% - 100px);
+}
+
+#newsSubscribeInput:focus {
+  outline: none;
+}
+
+#newsSubscribeBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: 0;
+  background: none;
+  font-size: 16px;
+  padding: 0 20px;
+  background: #47b2e4;
+  color: #fff;
+  transition: 0.3s;
+  border-radius: 50px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.footer-newsletter .validate {
+  text-align: left;
+  color: #6182ba;
+  margin-left: 0.5rem;
+  margin-top: 5px;
+  line-height: 1.5;
+  font-size: 13px;
+}
+
+#newsSubscribeBtn:hover {
+  background: #209dd8;
+}
+
+#footer .footer-top {
+  padding: 60px 0 30px 0;
+  background: #fff;
+}
+
+footer .logo {
+  font-size: 1.9rem !important;
+  color: #37517e !important;
+}
+
+footer .brandName {
+  font-size: 1.5rem !important;
+  margin: 0 !important;
+  padding: 0 0 1rem 0 !important;
+  line-height: 1 !important;
+  font-weight: 600;
+  color: #37517e !important;
+  display: inline-flex !important;
+}
+
+footer .brandSlogan {
+  font-size: 0.7rem !important;
+  color: #37517e !important;
+}
+
+footer i {
+  font-size: 18px;
+  color: white;
+}
+
+#footer .footer-top .footer-contact {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-contact h3 {
+  font-size: 28px;
+  margin: 0 0 10px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #37517e;
+}
+
+#footer .footer-top .footer-contact p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "Jost", sans-serif;
+  color: #5e5e5e;
+}
+
+#footer .footer-top h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #37517e;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+#footer .footer-top .footer-links {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footer .footer-top .footer-links ul i {
+  padding-right: 2px;
+  color: #47b2e4;
+  font-size: 18px;
+  line-height: 1;
+}
+
+#footer .footer-top .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+#footer .footer-top .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+#footer .footer-top .footer-links ul a {
+  color: #777777;
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+}
+
+#footer .footer-top .footer-links ul a:hover {
+  text-decoration: none;
+  color: #47b2e4;
+}
+
+#footer .footer-top .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #47b2e4;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .footer-top .social-links a:hover {
+  background: #209dd8;
+  color: #fff;
+  text-decoration: none;
+}
+
+#footer .footer-bottom {
+  padding: 30px 100px;
+  background: rgba(56, 82, 125, 1);
+  color: #fff;
+}
+
+#footer .copyright {
+  float: left;
+}
+
+#footer .credits {
+  float: right;
+  font-size: 13px;
+}
+
+#footer .credits a {
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  #footer .footer-bottom {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  #footer .copyright,
+  #footer .credits {
+    text-align: center;
+    float: none;
+  }
+  #footer .credits {
+    padding-top: 4px;
+  }
+}
