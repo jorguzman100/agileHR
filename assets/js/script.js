@@ -1,4 +1,20 @@
 $(document).ready(() => {
+
+  /*--------------------------------------------------------------
+  # PWA - Progressive Web Application
+  --------------------------------------------------------------*/
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js").then((registration) => {
+      console.log("Service worker registered!");
+      console.log(registration);
+    }).catch((error) => {
+      console.log("Service worker registration failed!");
+      console.log(error);
+    });
+  }
+
+
+
   /*--------------------------------------------------------------
   # General
   --------------------------------------------------------------*/
@@ -68,7 +84,6 @@ $(document).ready(() => {
 
   // Animate On Scroll - events
   document.addEventListener('aos:in', ({ detail }) => {
-    console.log('animated in', detail);
     setTimeout(() => {
       if (document.getElementById('highImpactChart')) {
         displayHighImpactChart();

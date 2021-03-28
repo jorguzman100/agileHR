@@ -2,15 +2,10 @@
   "name": "AgileHR Consulting Services",
   "short_name": "AgileHR Consulting Services",
   "start_url": ".",
-  "background_color": "rgba(56, 82, 125, 0.2)",
-  "theme_color": "rgba(56, 82, 125, 1)",
+  "background_color": "#52B4E0",
+  "theme_color": "#38527D",
   "display": "standalone",
   "icons": [
-    {
-      "src": "./assets/img/logo/logo_150.png",
-      "sizes": "150x150",
-      "type": "image/png"
-    },
     {
       "src": "./assets/img/logo/logo_192.png",
       "sizes": "192x192",
@@ -20,6 +15,12 @@
       "src": "./assets/img/logo/logo_512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "./assets/img/logo/maskable_icon.png",
+      "sizes": "196x196",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
