@@ -1,9 +1,31 @@
+
+/*--------------------------------------------------------------
+  # PWA - Progressive Web Application
+--------------------------------------------------------------*/
+window.addEventListener('load', e => {
+  /* new PWAConfApp(); */
+  registerSW();
+});
+
+async function registerSW() {
+  if ('serviceWorker' in navigator) {
+    try {
+      await navigator.serviceWorker.register('./sw.js');
+    } catch (e) {
+      alert('ServiceWorker registration failed. Sorry about that.');
+    }
+  } else {
+    document.querySelector('.alert').removeAttribute('hidden');
+  }
+}
+
+
 $(document).ready(() => {
 
   /*--------------------------------------------------------------
   # PWA - Progressive Web Application
   --------------------------------------------------------------*/
-  if ("serviceWorker" in navigator) {
+  /* if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("sw.js").then((registration) => {
       console.log("Service worker registered!");
       console.log(registration);
@@ -12,7 +34,7 @@ $(document).ready(() => {
       console.log(error);
     });
   }
-
+ */
 
 
   /*--------------------------------------------------------------
