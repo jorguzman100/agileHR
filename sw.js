@@ -44,7 +44,7 @@ const staticAssets = [
     "https://cdn.jsdelivr.net/npm/echarts@5.0.2/dist/echarts.min.js"
 ];
 
-self.addEventListener('install', async event => {
+/* self.addEventListener('install', async event => {
     console.log('install event')
     const cache = await caches.open(cacheName);
     await cache.addAll(staticAssets);
@@ -78,4 +78,4 @@ async function networkFirst(req) {
         return cachedResponse;
     }
 }
-
+ */
