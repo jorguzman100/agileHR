@@ -100,12 +100,12 @@ h6 {
 --------------------------------------------------------------*/
 
 header {
-  background: rgba(56, 82, 125, 1);
+  background: green;
   padding: 0px 0px;
 }
 
 .solidHeader {
-  background: greenyellow;
+  background: green;
   padding: 0px 0px;
   transition: all 1.5s;
 }
