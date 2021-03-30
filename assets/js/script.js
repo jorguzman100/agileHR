@@ -23,21 +23,6 @@ async function registerSW() {
 $(document).ready(() => {
 
   /*--------------------------------------------------------------
-  # PWA - Progressive Web Application
-  --------------------------------------------------------------*/
-  /* if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("sw.js").then((registration) => {
-      console.log("Service worker registered!");
-      console.log(registration);
-    }).catch((error) => {
-      console.log("Service worker registration failed!");
-      console.log(error);
-    });
-  }
- */
-
-
-  /*--------------------------------------------------------------
   # General
   --------------------------------------------------------------*/
 
@@ -114,7 +99,7 @@ $(document).ready(() => {
   });
 
   // Ajax factory
-  const runAjax = ({ url }, { type }, { data }, { successFunction }) => {
+  /* const runAjax = ({ url }, { type }, { data }, { successFunction }) => {
     $.ajax({
       url: url,
       type: type,
@@ -128,7 +113,7 @@ $(document).ready(() => {
         console.log(error)
       },
     })
-  }
+  } */
 
 
   /*--------------------------------------------------------------
@@ -327,16 +312,16 @@ $(document).ready(() => {
   # Contact
   --------------------------------------------------------------*/
 
-  const displaySuccessAlert = () => {
+  const displaySuccessAlert = (alertName) => {
     $("#name").val('');
     $("#email").val('');
     $("#mobile").val('');
     $("#subject").val('');
     $("#message").val('');
     $('.validate').fadeOut(500);
-    $('.alert-success').fadeIn(1500);
+    $(alertName).fadeIn(1500);
     setTimeout(() => {
-      $('.alert-success').fadeOut(1500);
+      $(alertName).fadeOut(1500);
     }, 5000);
   }
 
@@ -401,10 +386,37 @@ $(document).ready(() => {
   }
 
   // Send the message
+
+  // EmailJS option
+  // Source: Send Email directly from JavaScript
+  // https://www.youtube.com/watch?v=x7Ewtay0Q78
+  const sendEmail = (data) => {
+    emailjs.send('service_b5di5q9', 'contact_form', data)
+      .then((res) => {
+        displaySuccessAlert('#formSuccessAlert');
+      }, (error) => {
+        console.log('EmailJS error');
+        console.log(error);
+      });
+  }
+
+
   $('#submitMessageBtn').on('click', () => {
     let allImputsValid = validateInputFields();
     if (allImputsValid) {
-      runAjax(
+
+      // Smtp option / EmailJS option
+      let data = {
+        "name": $("#name").val(),
+        "email": $("#email").val(),
+        "mobile": $("#mobile").val(),
+        "subject": $("#subject").val(),
+        "message": $("#message").val(),
+      }
+      sendEmail(data);
+
+      // Ajax option
+      /* runAjax(
         { url: '/api/clients' },
         { type: 'POST' },
         {
@@ -416,7 +428,7 @@ $(document).ready(() => {
           }
         },
         { successFunction: displaySuccessAlert }
-      );
+      ); */
     }
   });
 
@@ -477,6 +489,9 @@ $(document).ready(() => {
     generalBackToTopBtn();
     /* headerDropdownHover(); */
     wwdHideCardImageHover();
+
+    // EmailJS
+    emailjs.init("user_bI7greHlerPybmnk4Vcam");
   }
 
   init();
