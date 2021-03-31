@@ -129,6 +129,10 @@ header i {
   font-size: 2rem;
 }
 
+/* .navbar .container {
+  display: block;
+} */
+
 .navbar-brand:hover > * {
   color: rgba(255, 255, 255, 1);
 }
@@ -147,16 +151,9 @@ header .brandSlogan {
   padding-inline: 1.5rem;
 }
 
-/* For Media */
-.navbar-collapse a {
-  width: 240px;
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  .navbar-collapse a {
-    width: 100%;
-  }
+.contactLiItem,
+.contactLiItem a {
+  padding-right: 0px !important;
 }
 
 .navbar-toggler,
@@ -943,3 +940,44 @@ footer i {
     padding-top: 4px;
   }
 }
+
+/*--------------------------------------------------------------
+# Media queries
+--------------------------------------------------------------*/
+
+/* Extra small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) (cols-1) */
+@media (min-width: 576px) {
+  body {
+    background-color: cadetblue;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) (cols-2) */
+@media (min-width: 768px) {
+  body {
+    background-color: cornflowerblue;
+  }
+}
+
+/* Large devices (desktops, 992px and up) (cols-2-3) */
+@media (min-width: 992px) {
+  body {
+    background-color: darkorange;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up)  (cols-2-3) */
+@media (min-width: 1200px) {
+  body {
+    background-color: mediumaquamarine;
+  }
+}
+
+/* @media (orientation: landscape) {
+}
+
+@media (orientation: portrait), (max-width: 500px){
+} */

@@ -134,6 +134,16 @@ $(document).ready(() => {
     });
   } */
 
+  // Change container attribute on toggle button click
+  $('.navbar-toggler').on('click', () => {
+    if ($('.navbar button').attr('aria-expanded') === 'false') {
+      $('.navbar .container').attr('style', 'display:block');
+    } else {
+      $('.navbar .container').attr('style', 'display:flex');
+    }
+  });
+
+
 
 
   /*--------------------------------------------------------------
