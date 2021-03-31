@@ -77,5 +77,5 @@ async function networkFirst(req) {
         const cachedResponse = await cache.match(req);
         return cachedResponse;
     }
-}
- */
+} */
+

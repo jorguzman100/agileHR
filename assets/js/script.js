@@ -2,6 +2,8 @@
 /*--------------------------------------------------------------
   # PWA - Progressive Web Application
 --------------------------------------------------------------*/
+
+// Register the service worker
 window.addEventListener('load', e => {
   /* new PWAConfApp(); */
   registerSW();
@@ -18,6 +20,8 @@ async function registerSW() {
     document.querySelector('.alert').removeAttribute('hidden');
   }
 }
+
+
 
 
 $(document).ready(() => {
