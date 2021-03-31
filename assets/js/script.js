@@ -455,12 +455,32 @@ $(document).ready(() => {
     }
   });
 
+  // EmailJS option
+  // Source: Send Email directly from JavaScript
+  // https://www.youtube.com/watch?v=x7Ewtay0Q78
+  const sendNewsletterEmail = (data) => {
+    emailjs.send('service_b5di5q9', 'newsletter_form', data)
+      .then((res) => {
+        displayNewsletterSuccessAlert();
+      }, (error) => {
+        console.log('EmailJS error');
+        console.log(error);
+      });
+  }
+
   // Send the newsletter email
   $('#newsSubscribeBtn').on('click', () => {
     if ($("#newsSubscribeInput").val().length < 3) {
       $("#newsSubscribeInput").parent().siblings('.validate').fadeIn(1500);
     } else {
-      runAjax(
+      // EmailJS option
+      let data = {
+        "email": $("#newsSubscribeInput").val(),
+      }
+      sendNewsletterEmail(data);
+
+      // Ajax option
+      /* runAjax(
         { url: '/api/newsLetterEmails' },
         { type: 'POST' },
         {
@@ -469,7 +489,7 @@ $(document).ready(() => {
           }
         },
         { successFunction: displayNewsletterSuccessAlert }
-      );
+      ); */
     }
   });
 
