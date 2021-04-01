@@ -286,6 +286,7 @@ header .brandSlogan {
 
 .carousel-item {
   width: 100%;
+  position: unset;
   height: 350px;
   color: rgba(255, 255, 255, 1) !important;
   text-align: justify;
@@ -310,7 +311,7 @@ header .brandSlogan {
 }
 
 .carousel-item img {
-  width: 40px;
+  width: 60px;
   height: 40px;
   display: inline-flex;
   margin-left: auto;
@@ -479,6 +480,10 @@ header .brandSlogan {
 .card-img-overlay .card-text {
   text-align: left;
   margin-top: 5%;
+}
+
+#wwdCardTalent ul {
+  padding-inline-start: 20px;
 }
 
 /*--------------------------------------------------------------
@@ -945,6 +950,48 @@ footer i {
 # Media queries
 --------------------------------------------------------------*/
 
+/* For Galaxy Fold */
+@media (max-width: 300px) {
+  body {
+    background-color: violet;
+  }
+
+  .carousel-item h3 {
+    font-size: 1rem;
+  }
+
+  .carousel-item p {
+    font-size: 0.9rem;
+  }
+
+  .carousel-item img {
+    width: 50px;
+    height: 40px;
+  }
+
+  .behindCard .card-body {
+    padding: 0rem 1.5rem 1rem 1.5rem;
+  }
+
+  .contact .message-form,
+  .contact .info {
+    padding: 30px 10px;
+  }
+
+  .contact .info h3 {
+    font-size: 1rem;
+  }
+
+  .contact .info p {
+    font-size: 0.9rem;
+    padding: 0 5px 10px 60px;
+  }
+
+  .contact .message-form p {
+    font-size: 0.9rem;
+  }
+}
+
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query for `xs` since this is the default in Bootstrap */
 
@@ -967,12 +1014,81 @@ footer i {
   body {
     background-color: darkorange;
   }
+
+  .carousel-item {
+    padding: 5% 20% 0;
+    margin-top: 1rem;
+  }
+
+  .carousel-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .carousel-item p {
+    font-size: 1.2rem;
+  }
+
+  .carousel-item img {
+    width: 70px;
+    height: 55px;
+  }
 }
 
 /* Extra large devices (large desktops, 1200px and up)  (cols-2-3) */
 @media (min-width: 1200px) {
   body {
     background-color: mediumaquamarine;
+  }
+
+  .fullLogo .logo {
+    font-size: 4rem;
+    padding-top: 3rem;
+  }
+
+  .fullLogo .brandName {
+    font-size: 3.5rem;
+  }
+
+  .fullLogo .brandSlogan {
+    font-size: 1.35rem;
+  }
+
+  .fullLogo .brandConsulting {
+    font-size: 2rem;
+  }
+
+  .carousel-item {
+    padding: 2% 21% 0;
+    margin-top: 1rem;
+  }
+
+  .carousel-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .carousel-item p {
+    font-size: 1.35rem;
+  }
+
+  .carousel-item img {
+    width: 80px;
+    height: 60px;
+  }
+}
+
+@media (min-width: 1500px) {
+  body {
+    background-color: springgreen;
+  }
+
+  .carousel-item h3 {
+    font-size: 1.9rem;
+  }
+
+  .carousel-item p {
+    font-size: 1.7rem;
   }
 }
 
