@@ -956,9 +956,9 @@ footer i {
 
 /* For Galaxy Fold */
 @media (max-width: 300px) {
-  body {
+  /* body {
     background-color: violet;
-  }
+  } */
 
   .carousel-item h3 {
     font-size: 1rem;
@@ -1001,16 +1001,16 @@ footer i {
 
 /* Small devices (landscape phones, 576px and up) (cols-1) */
 @media (min-width: 576px) {
-  body {
+  /* body {
     background-color: cadetblue;
-  }
+  } */
 }
 
 /* Medium devices (tablets, 768px and up) (cols-2) */
 @media (min-width: 768px) {
-  body {
+  /* body {
     background-color: cornflowerblue;
-  }
+  } */
 
   .howWeDoItCol {
     padding-left: 20px !important;
@@ -1020,9 +1020,9 @@ footer i {
 
 /* Large devices (desktops, 992px and up) (cols-2-3) */
 @media (min-width: 992px) {
-  body {
+  /* body {
     background-color: darkorange;
-  }
+  } */
 
   .carousel-item {
     padding: 5% 20% 0;
@@ -1065,9 +1065,9 @@ footer i {
 
 /* Extra large devices (large desktops, 1200px and up)  (cols-2-3) */
 @media (min-width: 1200px) {
-  body {
+  /* body {
     background-color: mediumaquamarine;
-  }
+  } */
 
   .fullLogo .logo {
     font-size: 4rem;
@@ -1107,9 +1107,9 @@ footer i {
 }
 
 @media (min-width: 1500px) {
-  body {
+  /* body {
     background-color: springgreen;
-  }
+  } */
 
   .carousel-item h3 {
     font-size: 1.9rem;
