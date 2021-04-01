@@ -32,11 +32,6 @@ a:hover {
   text-decoration: none;
 }
 
-#newsSubscribeBtn:focus,
-button:focus {
-  outline: none;
-}
-
 h2,
 h3,
 h4,
@@ -724,9 +719,6 @@ header .brandSlogan {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-#footer {
-  /* font-size: 14px; */
-}
 
 #footer .footer-newsletter {
   padding: 50px 0;
@@ -746,7 +738,6 @@ header .brandSlogan {
 }
 
 #newsSubscribeDiv {
-  margin-top: 30px;
   background: #fff;
   padding: 6px 10px;
   position: relative;
@@ -755,10 +746,17 @@ header .brandSlogan {
   text-align: left;
 }
 
+#newsSubscribeDiv label {
+  color: #6182ba;
+  font-size: 13px;
+}
+
 #newsSubscribeInput {
-  border: 0;
-  padding: 4px 8px;
-  width: calc(100% - 100px);
+  /* width: calc(100% - 100px); */
+  width: calc(100% - 50px);
+  padding: 6px 10px;
+  position: relative;
+  border: none;
 }
 
 #newsSubscribeInput:focus {
@@ -766,19 +764,29 @@ header .brandSlogan {
 }
 
 #newsSubscribeBtn {
-  position: absolute;
+  /* position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
-  border: 0;
+  border: 0; */
   background: none;
   /* font-size: 16px; */
-  padding: 0 20px;
+  border: 0;
+  margin-top: 24px;
+  padding: 12px 34px;
   background: #47b2e4;
   color: #fff;
   transition: 0.3s;
   border-radius: 50px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#newsSubscribeBtn:focus,
+button:focus {
+  outline: none;
+}
+
+#newsSubscribeBtn:hover {
+  background: #209dd8;
 }
 
 .footer-newsletter .validate {
@@ -788,10 +796,6 @@ header .brandSlogan {
   margin-top: 5px;
   line-height: 1.5;
   font-size: 13px;
-}
-
-#newsSubscribeBtn:hover {
-  background: #209dd8;
 }
 
 #footer .footer-top {
