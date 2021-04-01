@@ -1011,6 +1011,11 @@ footer i {
   body {
     background-color: cornflowerblue;
   }
+
+  .howWeDoItCol {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
 }
 
 /* Large devices (desktops, 992px and up) (cols-2-3) */
