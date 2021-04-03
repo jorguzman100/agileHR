@@ -305,6 +305,13 @@ $(document).ready(() => {
     });
   }
 
+  // Display selected service
+  $('.wwdLearnMore-btn, .dropdown-item').on('click', (e) => {
+    $('.wwwSection').hide();
+    $($(e.target).attr('href')).show();
+    /* alert($(e.target).attr('href')); */
+  });
+
 
   /*--------------------------------------------------------------
   # How we do it
@@ -518,7 +525,8 @@ $(document).ready(() => {
   const init = () => {
     $('.alert-success').fadeOut();
     $('.alert-danger').fadeOut();
-    $('.validate').fadeOut();
+    $('.validate').hide();
+    $('.wwwSection').hide();
     generalSmoothScroll();
     generalBackToTopBtn();
     /* headerDropdownHover(); */
