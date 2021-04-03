@@ -305,11 +305,16 @@ $(document).ready(() => {
     });
   }
 
+
   // Display selected service
   $('.wwdLearnMore-btn, .dropdown-item').on('click', (e) => {
-    $('.wwwSection').hide();
+    $('.wwdSection').hide();
     $($(e.target).attr('href')).show();
-    /* alert($(e.target).attr('href')); */
+    AOS.refresh({
+      offset: 0
+    });
+    /* $($(e.target).attr('href')).fadeOut(); */
+
   });
 
 
@@ -526,12 +531,12 @@ $(document).ready(() => {
     $('.alert-success').fadeOut();
     $('.alert-danger').fadeOut();
     $('.validate').hide();
-    $('.wwwSection').hide();
+    $('.wwdSection').hide();
+    $('.wwdSlideContent').slideUp();
     generalSmoothScroll();
     generalBackToTopBtn();
     /* headerDropdownHover(); */
     wwdHideCardImageHover();
-
     // EmailJS
     emailjs.init("user_bI7greHlerPybmnk4Vcam");
   }

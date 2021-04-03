@@ -481,65 +481,43 @@ header .brandSlogan {
   padding-inline-start: 20px;
 }
 
+.wwdSection .col-lg-6 {
+  padding-left: 0;
+}
+
+.imageContainer {
+  text-align: center;
+}
+
+.wwdSection img {
+  height: 25vh;
+  box-shadow: none;
+  margin-bottom: 1rem;
+}
+
 /*--------------------------------------------------------------
 # HR Strategic Planning
 --------------------------------------------------------------*/
-
-#hrStrategicSection {
-  background-color: cornflowerblue;
-  height: 100vh;
-  display: block;
-}
 
 /*--------------------------------------------------------------
 # Agile HR
 --------------------------------------------------------------*/
 
-#agileHRSection {
-  background-color: darksalmon;
-  height: 100vh;
-  display: block;
-}
-
 /*--------------------------------------------------------------
 # HR Transformation
 --------------------------------------------------------------*/
-
-#hrtSection {
-  background-color: #18d26e;
-  height: 100vh;
-  display: block;
-}
 
 /*--------------------------------------------------------------
 # Digital HR
 --------------------------------------------------------------*/
 
-#digitalHRSection {
-  background-color: beige;
-  height: 100vh;
-  display: block;
-}
-
 /*--------------------------------------------------------------
 # HR for SMEs
 --------------------------------------------------------------*/
 
-#smeSection {
-  background-color: darkkhaki;
-  height: 100vh;
-  display: block;
-}
-
 /*--------------------------------------------------------------
 # Talent
 --------------------------------------------------------------*/
-
-#talentSection {
-  background-color: plum;
-  height: 100vh;
-  display: block;
-}
 
 /*--------------------------------------------------------------
 # How we do it
@@ -1179,9 +1157,3 @@ footer i {
     font-size: 1.7rem;
   }
 }
-
-/* @media (orientation: landscape) {
-}
-
-@media (orientation: portrait), (max-width: 500px){
-} */
