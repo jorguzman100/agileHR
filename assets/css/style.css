@@ -124,10 +124,6 @@ header i {
   font-size: 2rem;
 }
 
-/* .navbar .container {
-  display: block;
-} */
-
 .navbar-brand:hover > * {
   color: rgba(255, 255, 255, 1);
 }
@@ -143,12 +139,7 @@ header .brandSlogan {
 
 .nav-item {
   /* font-size: 1.05rem; */
-  padding-inline: 1.5rem;
-}
-
-.contactLiItem,
-.contactLiItem a {
-  padding-right: 0px !important;
+  padding-inline: 0.75rem;
 }
 
 .navbar-toggler,
@@ -174,6 +165,32 @@ header .brandSlogan {
 .dropdown-item:hover {
   background: none;
   border: none;
+}
+
+.languageLi {
+  padding: 0px 0px 0px 10px;
+}
+
+.languageLi .nav-link {
+  padding: 2px 0px 0px 0px;
+}
+
+.flag {
+  font-size: 1.75rem;
+}
+
+.flag2 {
+  font-size: 1.5rem;
+  padding-right: 0.5rem;
+}
+
+.downFlagA {
+  padding: 0px 8px;
+  width: 10rem;
+}
+
+.languageMenu {
+  width: 10rem;
 }
 
 .img-fluid,
@@ -1049,6 +1066,10 @@ footer i {
   /* body {
     background-color: cornflowerblue;
   } */
+
+  .navbar .container {
+    padding-right: 3.5rem;
+  }
 
   .howWeDoItCol {
     padding-left: 20px !important;

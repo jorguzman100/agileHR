@@ -143,7 +143,18 @@ $(document).ready(() => {
     }
   });
 
+  // Hide toggle after nav-link click
+  const hideTogglerMenu = () => {
+    // Hide toggler menu
+    $('.navbar-toggler').addClass('collapsed');
+    $('.navbar-toggler').attr('aria-expanded', 'false');
+    $('#navbarSupportedContent').removeClass('show');
+    $('.navbar .container').attr('style', 'display:flex');
+  }
 
+  $('.nlHome, .nlAbout, .nlContact').on('click', () => {
+    hideTogglerMenu();
+  });
 
 
   /*--------------------------------------------------------------
@@ -306,14 +317,21 @@ $(document).ready(() => {
   }
 
 
+
+
   // Display selected service
-  $('.wwdLearnMore-btn, .dropdown-item').on('click', (e) => {
+  $('.wwdLearnMore-btn, .dropdown-item, .footerServicesUL a').on('click', (e) => {
+    hideTogglerMenu();
+
+    // Hide all What-we-do sections
     $('.wwdSection').hide();
+    // Show selected service
     $($(e.target).attr('href')).show();
     AOS.refresh({
-      offset: 0
-    });
-    /* $($(e.target).attr('href')).fadeOut(); */
+      offset: 0,
+      throttleDelay: 0
+    },
+      console.log('AOS.refresh()'));
 
   });
 
